@@ -6,7 +6,7 @@ module OmniAuth
       option :name, "wechat_qiye"
 
       option :client_options, {
-                                :site => "https://qyapi.weixin.qq.com",
+                                site: "https://qyapi.weixin.qq.com",
                                 authorize_url: "https://open.weixin.qq.com/connect/oauth2/authorize#wechat_redirect",
                                 token_url:     "/cgi-bin/gettoken",
                                 token_method:  :get,
@@ -15,7 +15,7 @@ module OmniAuth
                                 }
                               }
 
-      option :authorize_params, {scope: "snsapi_userinfo"}
+      option :authorize_params, {scope: "snsapi_base"}
       option :token_params, {parse: :json}
 
       uid do
